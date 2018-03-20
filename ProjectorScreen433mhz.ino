@@ -20,6 +20,7 @@ const byte interruptPin = 2; //Nano only works on pin 2 (RX0) or 3 (RST) let's u
 const long lowerMhz = 2981764; //HomeGear Remote sent this command to lower so let's use it in the code
 const long raiseMhz = 2981761; //HomeGear Remote sent this command to raise so let's use it in the code
 const byte bitLength = 24; //HomeGear Remote used a 24 bit length so let's use it in the code
+const long pulseRate = 384; //HomeGear pulse rate was 384ms so let's use it in the code
 byte state = 2; // Set to 2 intitialy so both raise or lower will work on boot
 
 void setup() {  
@@ -62,9 +63,9 @@ void raiseScreen() {
   if (state != 0 ) { //Only run this once if we are already up
     digitalWrite(ledPin, HIGH); //Visual LED for signal
     RF.send(raiseMhz, bitLength); //Send Command
-    delay(1);
+    delay(pulseRate);
     RF.send(raiseMhz, bitLength); //Send again
-    delay(1);
+    delay(pulseRate);
     RF.send(raiseMhz, bitLength); //Send again
     digitalWrite(ledPin, LOW); //Turn off Visual LED for Signal
   }
@@ -75,9 +76,9 @@ void lowerScreen() {
   if (state != 1) {  //Only run this once if we are already down
     digitalWrite(ledPin, HIGH); //Visual LED for signal
     RF.send(lowerMhz, bitLength); //Send Command
-    delay(1);
+    delay(pulseRate);
     RF.send(lowerMhz, bitLength); //Send again
-    delay(1);
+    delay(pulseRate);
     RF.send(lowerMhz, bitLength); //Send again
     digitalWrite(ledPin, LOW); //Turn off Visual LED for Signal
   }
