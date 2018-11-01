@@ -1,5 +1,5 @@
 # Send a 433mhz signal to a HomeGear projector screen from a 12v Projector trigger
-This was designed and coded to work for [Homegear 110” HD Motorized 16:9 Projector Screen W/ Remote Control](http://amzn.to/2ppoBB0). Codes in ProjectorScreen433mkz.ino are directly read from the remote that comes with the Homegear screen. If you purchase a screen other than [this one](http://amzn.to/2ppoBB0), you can still read the codes as long as you can verify your screen operates on 433mhz. This guide will explain how to read 433mhz codes and set them in the code.
+This was designed and coded to work for [Homegear 110” HD Motorized 16:9 Projector Screen W/ Remote Control](http://amzn.to/2ppoBB0). Codes in ProjectorScreen433mhz.ino are directly read from the remote that comes with the Homegear screen. If you purchase a screen other than [this one](http://amzn.to/2ppoBB0), you can still read the codes as long as you can verify your screen operates on 433mhz. This guide will explain how to read 433mhz codes and set them in the code.
 
 
 ## Software Required
