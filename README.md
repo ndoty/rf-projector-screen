@@ -30,7 +30,7 @@ Upload either "ProjectorScreen433mhz.ino" or "ReceiveDemo_Simple.ino" depending 
 Make sure you have loaded "ReceiveDemo_Simple.ino" Ensure you have purchased and are using the 433mhz RX. Load the code from "" on you board (nano). Open serial monitor to recieve messages. Press a button on your remote to capture the code and other details of the signal. Record those signals in "".
 
 ### Wire up 12v Trigger
-Some projectors have the old style wire prong so you can wire direct. Others you may need to get an adpater from headphone style jack to bare wire you can wire into the nano. All grounds need to be connected to eachother. 12v Power wire signal needs to be attached to PIN D2 on a nano.
+Some projectors have the old style wire prong so you can wire direct. Others you may need to get an adpater from headphone style jack to bare wire you can wire into the 12v convertor then nano. All grounds need to be connected to eachother. 12v Power wire signal needs to be attached the input of the 12v convertor then the outpu of the 12v convertor to PIN D2 on a nano. DO NOT input 12v directly into the nano,, you will see and smell some nastyl white smoke.
 
 ### Test it out
 Mkae sure you have loaded "ProjectorScreen433mhz.ino" 
