@@ -21,7 +21,7 @@ Head over to http://bit.ly/2pMF4in or use CH340 Driver.zip from this repo.
 Select the files for your Operating System to install the Driver. This will allow the Arduino IDE to flash the Arduino Nano Clone.
 
 ### Wire up 433mhz
-Both the RX and TX will use pin Pin D10 for communication. Power and ground will come from the nano. Only one 433mhz module can be used at a time. Wire only the one you need, you cannot do both with this example. You will use only the 433mhz TX when in operation. The 433mhz RX is only if you need to read commands from another brand screen. Most screens probably use the same commands so only follow the Read Codes if you either know you need to read codes in, or the program is not working for you.
+Both the RX and TX will use pin Pin D10 for communication. Power and ground will come from the nano. Only one 433mhz module can be used at a time. Wire only the one you need, you cannot do both with this example. You will use only the 433mhz TX when in operation. The 433mhz RX is only if you need to read commands from another brand screen. Most screens probably use the same commands so only follow the Read Codes if you either know you need to read codes in, or the program is not working for you. (Reference Wiring Diagram for TX/RX 433 MHZ)
 
 ### Upload Arduino Code to Nano
 Upload either "ProjectorScreen433mhz.ino" or "ReceiveDemo_Simple.ino" depending on if you are needing to read codes. If you dont need to read codes you can skip that section below. Use the Arduino IDE to accomplish this. Many other tutorials exist on how to uplaod code to Arduino. You will also utilize serial monitor in the Arduino IDE if reading codes. 
@@ -30,7 +30,7 @@ Upload either "ProjectorScreen433mhz.ino" or "ReceiveDemo_Simple.ino" depending 
 Make sure you have loaded "ReceiveDemo_Simple.ino" Ensure you have purchased and are using the 433mhz RX. Load the code from "" on you board (nano). Open serial monitor to recieve messages. Press a button on your remote to capture the code and other details of the signal. Record those signals in "".
 
 ### Wire up 12v Trigger
-Some projectors have the old style wire prong so you can wire direct. Others you may need to get an adpater from headphone style jack to bare wire you can wire into the 12v convertor then nano. All grounds need to be connected to eachother. 12v Power wire signal needs to be attached the input of the 12v convertor then the outpu of the 12v convertor to PIN D2 on a nano. DO NOT input 12v directly into the nano,, you will see and smell some nastyl white smoke.
+Some projectors have the old style wire prong so you can wire direct. Others you may need to get an adpater from headphone style jack to bare wire you can wire into the 12v convertor then nano. All grounds need to be connected to eachother. 12v Power wire signal needs to be attached the input of the 12v convertor then the outpu of the 12v convertor to PIN D2 on a nano. DO NOT input 12v directly into the nano,, you will see and smell some nastyl white smoke. (Reference Wiring Diagram for Projector Trigger and Step Down)
 
 ### Test it out
 Mkae sure you have loaded "ProjectorScreen433mhz.ino" 
